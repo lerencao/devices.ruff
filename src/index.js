@@ -11,12 +11,16 @@ $.ready(function (error) {
 
     btn.on('push', function() {
         console.log("button pushed");
-        buzzer.turnOn();
+        if (buzzer.isOn()) {
+            buzzer.turnOff();
+        } else {
+            buzzer.turnOn();
+        }
+
     });
 
     btn.on('release', function() {
         console.log("button released");
-         buzzer.turnOff();
     });
 });
 
