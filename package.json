@@ -6,7 +6,8 @@
     "main": "src/index.js",
     "ruff": {
         "dependencies": {
-            "ruff-mbd-v1": "^2.0.4"
+            "ruff-mbd-v1": "^2.0.4",
+            "ky-016": "^1.0.6"
         }
     }
 }

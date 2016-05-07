@@ -515,6 +515,34 @@
                     }
                 }
             }
+        },
+        {
+            "id": "led",
+            "model": "KY-016",
+            "driver": "ky-016",
+            "inputs": {
+                "pwm-r": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 490
+                    },
+                    "bind": "ruff-pwm/pwm-0"
+                },
+                "pwm-g": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 490
+                    },
+                    "bind": "ruff-pwm/pwm-1"
+                },
+                "pwm-b": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 490
+                    },
+                    "bind": "ruff-pwm/pwm-2"
+                }
+            }
         }
     ]
 }
