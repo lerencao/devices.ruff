@@ -6,7 +6,10 @@
     "main": "src/index.js",
     "ruff": {
         "dependencies": {
-            "ruff-mbd-v1": "^2.0.4"
-        }
+            "ruff-mbd-v1": "^2.0.4",
+            "buzzer-gpio": "^0.1.2",
+            "button-gpio": "^1.0.1"
+        },
+        "devDependencies": {}
     }
 }

@@ -1,4 +1,32 @@
 {
     "board": "ruff-mbd-v1",
-    "devices": []
+    "devices": [
+        {
+            "id": "buzzer",
+            "model": "FC-49",
+            "driver": "buzzer-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "out_high"
+                    }
+                }
+            }
+        },
+        {
+            "id": "button",
+            "model": "CK002",
+            "driver": "button-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    }
+                }
+            }
+        }
+    ]
 }

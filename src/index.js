@@ -6,9 +6,20 @@ $.ready(function (error) {
         return;
     }
 
-    $('#led-r').turnOn();
+    var btn =    $('#button');
+    var buzzer = $('#buzzer');
+
+    btn.on('push', function() {
+        console.log("button pushed");
+        buzzer.turnOn();
+    });
+
+    btn.on('release', function() {
+        console.log("button released");
+         buzzer.turnOff();
+    });
 });
 
 $.end(function () {
-    $('#led-r').turnOff();
+   $('#buzzer').turnOff();
 });
