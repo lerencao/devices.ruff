@@ -9,7 +9,8 @@
             "ruff-mbd-v1": "^2.0.4",
             "buzzer-gpio": "^0.1.2",
             "button-gpio": "^1.0.1",
-            "dht11": "^0.1.8"
+            "dht11": "^0.1.8",
+            "lcd1602-pcf8574a-hd44780": "^0.1.6"
         },
         "devDependencies": {}
     }

@@ -34,8 +34,20 @@ $.ready(function (error) {
                    );
     }, 1000);
 
+    var lcd = $('#lcd1602');
+    lcd.cursorOff();
+    lcd.blinkOff();
+    lcd.turnOn();
+
+    lcd.setCursor(0, 0);
+
+    lcd.setCursor(6, 0);
+    lcd.print('CHEN');
+    lcd.setCursor(3, 1);
+    lcd.print('I LOVE YOU');
 });
 
 $.end(function () {
-   $('#buzzer').turnOff();
+    $('#buzzer').turnOff();
+    $('#lcd1602').turnOff();
 });
