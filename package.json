@@ -8,7 +8,8 @@
         "dependencies": {
             "ruff-mbd-v1": "^2.0.4",
             "buzzer-gpio": "^0.1.2",
-            "button-gpio": "^1.0.1"
+            "button-gpio": "^1.0.1",
+            "dht11": "^0.1.8"
         },
         "devDependencies": {}
     }

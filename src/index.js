@@ -22,6 +22,18 @@ $.ready(function (error) {
     btn.on('release', function() {
         console.log("button released");
     });
+
+    var dht11 = $('#dht11');
+
+    setInterval(function() {
+        var temperature = dht11.temperature;
+        var humidityRelative = dht11.humidityRelative;
+        console.log("temp: %d, humidity: %d",
+                    dht11.temperature,
+                    dht11.humidityRelative
+                   );
+    }, 1000);
+
 });
 
 $.end(function () {

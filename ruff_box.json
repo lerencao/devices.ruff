@@ -189,7 +189,8 @@
             },
             "outputs": {
                 "gpio": {
-                    "type": "gpio"
+                    "type": "gpio",
+                    "reserved": true
                 }
             }
         },
@@ -542,6 +543,19 @@
                         "edge": "both"
                     },
                     "bind": "gpio-12/gpio"
+                }
+            }
+        },
+        {
+            "id": "dht11",
+            "model": "DHT11",
+            "driver": "dht11",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "reserve": "gpio-18/gpio",
+                    "bind": "gpio-18/gpio",
+                    "reserved": true
                 }
             }
         }

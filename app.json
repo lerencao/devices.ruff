@@ -27,6 +27,17 @@
                     }
                 }
             }
+        },
+        {
+            "id": "dht11",
+            "model": "DHT11",
+            "driver": "dht11",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "reserve": "gpio-18/gpio"
+                }
+            }
         }
     ]
 }
