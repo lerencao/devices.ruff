@@ -23,28 +23,25 @@ $.ready(function (error) {
         console.log("button released");
     });
 
-    var dht11 = $('#dht11');
-
-    setInterval(function() {
-        var temperature = dht11.temperature;
-        var humidityRelative = dht11.humidityRelative;
-        console.log("temp: %d, humidity: %d",
-                    dht11.temperature,
-                    dht11.humidityRelative
-                   );
-    }, 1000);
-
+    var dht11 = $('#dht11')
     var lcd = $('#lcd1602');
     lcd.cursorOff();
     lcd.blinkOff();
     lcd.turnOn();
 
-    lcd.setCursor(0, 0);
+    setInterval(function() {
+        var tempStr     = "TEMP:" + dht11.temperature;
+        var humidityStr = "RH  :" + dht11.humidityRelative;
+        lcd.setCursor(0, 0);
+        lcd.print(tempStr);
+        lcd.setCursor(0, 1);
+        lcd.print(humidityStr);
 
-    lcd.setCursor(6, 0);
-    lcd.print('CHEN');
-    lcd.setCursor(3, 1);
-    lcd.print('I LOVE YOU');
+        console.log("temp: %d, humidity: %d",
+                    dht11.temperature,
+                    dht11.humidityRelative
+                   );
+    }, 1000);
 });
 
 $.end(function () {
