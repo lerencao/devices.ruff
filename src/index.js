@@ -30,8 +30,8 @@ $.ready(function (error) {
     lcd.turnOn();
 
     setInterval(function() {
-        var tempStr     = "TEMP:" + dht11.temperature;
-        var humidityStr = "RH  :" + dht11.humidityRelative;
+        var tempStr     = "TEMP:" + dht11.temperature.toFixed(1);
+        var humidityStr = "RH  :" + dht11.humidityRelative.toFixed(1);
         lcd.setCursor(0, 0);
         lcd.print(tempStr);
         lcd.setCursor(0, 1);
