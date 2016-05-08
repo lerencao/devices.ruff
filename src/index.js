@@ -41,7 +41,7 @@ $.ready(function (error) {
                     dht11.temperature,
                     dht11.humidityRelative
                    );
-    }, 1000);
+    }, 5000);
 });
 
 $.end(function () {
